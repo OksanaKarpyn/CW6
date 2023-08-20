@@ -12,16 +12,19 @@
    max-width: 500px;
    padding-top: 50px;
    margin: auto;
+   z-index:21;
 }
 header{
-   background-image: url(../img/header-bg.png);
+   background-color:#3535EC ;
+   background-image: url(../images/header-bg.png);
    background-size: cover;
    background-position: center 50px;
    background-repeat: no-repeat;
    min-height: 300px;
    position: sticky;
-   left: 0px;
-   right: 0px;
+   top: 0px;
+   bottom: 0px;
+   z-index: 1;
 }
 header h1{
    color: #fff;
@@ -35,7 +38,7 @@ header h1{
    justify-content: center;
    flex-wrap: wrap;
 }
-.calendar-box {
+.calendarBox {
    width: 80px;
    height: 80px;
    background-color: #306753;
@@ -46,6 +49,8 @@ header h1{
    padding: 5px;
    margin: 10px;
    border-radius: 10px;
+   color: #fff;
+   cursor: pointer;
 }
 .box-opened{
    opacity: 0.3;
@@ -55,12 +60,13 @@ header h1{
 }
 .calendar-date {
    font-size: 1.5rem;
-   color: #fff;
+   
 }
 .calendar-box:last-child{
    background-color:#fff;
+   color: #09573b;
    width: 100%;
-   color: #306753;
+  
 }
 /* modale */
 .modal {
@@ -75,15 +81,16 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-}
-.modal-hidden {
+z-index: 3;
 }
 .modal-window {
    margin: auto;
    width: 500px;
    background-color:#DE7EB6 ;
    border-radius: 10px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .modal-content {
    text-align: center;
@@ -95,7 +102,8 @@ justify-content: center;
    width: 100%;
 }
 .modal-button {
-   margin-top: 20px;
+   margin: 20px auto;
+   max-width: 300px;
    padding: 10px 20px;
    border-radius: 10px;
    border: #0e0e97c9;
@@ -104,6 +112,7 @@ justify-content: center;
 .modal-button:active{
    transform: scale(0.9);
    box-shadow: 2px 5px 2px #c55596;
+  
 }
 .modal-hidden{
    visibility: hidden;
